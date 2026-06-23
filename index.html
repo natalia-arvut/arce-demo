@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="de-CH" class="scroll-smooth">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ARCE GmbH — Umzug, Reinigung und Entsorgung | Frauenfeld & Winterthur</title>
+<meta name="description" content="Die ARCE GmbH bietet einen umfassenden Service: Umzüge, professionelle Reinigung und Entsorgung — zuverlässig von der ersten Anfrage bis zum erfolgreichen Abschluss. Standorte in Frauenfeld und Winterthur." />
+<meta property="og:title" content="ARCE GmbH — Umzug, Reinigung und Entsorgung" />
+<meta property="og:description" content="Umzüge, Reinigung und Entsorgung — alles aus einer Hand. Frauenfeld & Winterthur." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="de_CH" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy:   '#0A1A3F',
+        ink:    '#0c1322',
+        brand:  '#003084',
+        signal: '#1B4FC4',
+        steel:  '#90A8CC',
+        paper:  '#F4F6FB',
+      },
+      fontFamily: {
+        display: ['Archivo', 'system-ui', 'sans-serif'],
+        sans:    ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+<style>
+  body{font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.font-display{font-family:'Archivo',system-ui,sans-serif;}
+  ::selection{background:#003084;color:#fff;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .hairline{background:linear-gradient(90deg,transparent,rgba(144,168,204,.55),transparent);}
+  .nav-link{position:relative;}
+  .nav-link::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:#003084;transition:width .35s cubic-bezier(.22,1,.36,1);}
+  .nav-link:hover::after{width:100%;}
+  .eyebrow{letter-spacing:.34em;}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  /* mobile menu */
+  #mnav{transition:opacity .3s ease, visibility .3s ease;}
+  #mnav.open{opacity:1;visibility:visible;}
+  #mnav.closed{opacity:0;visibility:hidden;}
+</style>
+</head>
+
+<body class="bg-paper text-ink antialiased">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-slate-200/70">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="flex items-center shrink-0" aria-label="ARCE GmbH — Startseite">
+      <img src="assets/web/logo.png" alt="ARCE GmbH" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-[15px] font-medium text-navy/85">
+      <a href="#umzug" class="nav-link">Umzug</a>
+      <a href="#reinigung" class="nav-link">Reinigung</a>
+      <a href="#entsorgung" class="nav-link">Entsorgung</a>
+      <a href="#ueber" class="nav-link">Über uns</a>
+      <a href="#team" class="nav-link">Team</a>
+      <a href="#galerie" class="nav-link">Galerie</a>
+      <a href="#kontakt" class="nav-link">Kontakt</a>
+    </nav>
+    <div class="hidden lg:flex items-center gap-4 shrink-0">
+      <a href="tel:0522035152" class="text-[15px] font-semibold text-navy hover:text-signal transition">052 203 51 52</a>
+      <a href="#kontakt" class="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-signal transition-colors">
+        Offerte
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <button id="burger" class="lg:hidden inline-flex flex-col justify-center gap-[5px] w-10 h-10 -mr-2" aria-label="Menü öffnen">
+      <span class="block h-[2px] w-6 bg-navy mx-auto transition-all"></span>
+      <span class="block h-[2px] w-6 bg-navy mx-auto transition-all"></span>
+      <span class="block h-[2px] w-6 bg-navy mx-auto transition-all"></span>
+    </button>
+  </div>
+</header>
+
+<!-- mobile nav overlay -->
+<div id="mnav" class="closed fixed inset-0 z-[60] bg-navy text-white lg:hidden flex flex-col">
+  <div class="px-6 h-20 flex items-center justify-between border-b border-white/10">
+    <img src="assets/web/logo_white.png" alt="ARCE GmbH" class="h-9 w-auto" />
+    <button id="mclose" class="w-10 h-10 text-white/90 text-2xl" aria-label="Menü schliessen">✕</button>
+  </div>
+  <nav class="flex-1 flex flex-col justify-center gap-1 px-8 text-2xl font-display font-600">
+    <a href="#umzug" class="mlink py-3 border-b border-white/10">Umzug</a>
+    <a href="#reinigung" class="mlink py-3 border-b border-white/10">Reinigung</a>
+    <a href="#entsorgung" class="mlink py-3 border-b border-white/10">Entsorgung</a>
+    <a href="#ueber" class="mlink py-3 border-b border-white/10">Über uns</a>
+    <a href="#team" class="mlink py-3 border-b border-white/10">Team</a>
+    <a href="#galerie" class="mlink py-3 border-b border-white/10">Galerie</a>
+    <a href="#kontakt" class="mlink py-3">Kontakt</a>
+  </nav>
+  <div class="px-8 pb-10">
+    <a href="tel:0522035152" class="block text-center rounded-full bg-white text-navy font-semibold py-3.5">052 203 51 52 anrufen</a>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section id="top" class="relative">
+  <div class="relative min-h-[calc(100svh-5rem)] mt-20 flex items-end overflow-hidden">
+    <img src="assets/web/hero.jpg" alt="Das Team der ARCE GmbH vor dem Fuhrpark in Frauenfeld" class="absolute inset-0 w-full h-full object-cover object-[50%_42%]" />
+    <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(10,26,63,.30)0%,rgba(10,26,63,.05)32%,rgba(10,26,63,.45)68%,rgba(10,26,63,.88)100%);"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(10,26,63,.72)0%,rgba(10,26,63,.30)42%,transparent 72%);"></div>
+
+    <div class="relative w-full mx-auto max-w-7xl px-5 sm:px-8 pb-12 sm:pb-16">
+      <p class="eyebrow text-[11px] sm:text-xs font-semibold uppercase text-steel mb-5">Umzug · Reinigung · Entsorgung</p>
+      <h1 class="font-display font-800 text-white leading-[0.98] text-[2.6rem] sm:text-6xl lg:text-[5.2rem] max-w-4xl">
+        Ihr Umzug. Ihre Reinigung.<br class="hidden sm:block" /> Ihre Entsorgung.
+        <span class="block text-steel font-700 mt-2 text-[1.6rem] sm:text-3xl lg:text-4xl">Alles aus einer Hand.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-base sm:text-lg text-white/85 leading-relaxed">
+        Die ARCE GmbH bietet einen umfassenden Service — zuverlässig von der ersten Anfrage bis zum
+        erfolgreichen Abschluss. Für private und geschäftliche Kunden in Frauenfeld und Winterthur.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 max-w-md sm:max-w-none">
+        <a href="#kontakt" class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-navy hover:bg-steel transition-colors shadow-lg shadow-navy/20">
+          Unverbindliche Offerte
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="tel:0522035152" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3.5 text-[15px] font-semibold text-white hover:bg-white/10 transition-colors">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          052 203 51 52
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS STRIP ================= -->
+<section class="bg-navy text-white">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <dl class="grid grid-cols-2 lg:grid-cols-4 divide-y divide-white/10 lg:divide-y-0 lg:divide-x lg:divide-white/10">
+      <div class="py-8 lg:py-10 lg:px-8 first:lg:pl-0">
+        <dt class="font-display font-800 text-4xl lg:text-5xl text-white">2</dt>
+        <dd class="mt-2 text-sm text-steel">Standorte — Frauenfeld &amp; Winterthur</dd>
+      </div>
+      <div class="py-8 lg:py-10 lg:px-8">
+        <dt class="font-display font-800 text-4xl lg:text-5xl text-white">10<span class="text-steel">+</span></dt>
+        <dd class="mt-2 text-sm text-steel">Jahre Erfahrung in der Branche</dd>
+      </div>
+      <div class="py-8 lg:py-10 lg:px-8">
+        <dt class="font-display font-800 text-4xl lg:text-5xl text-white">4.6<span class="text-steel text-2xl align-top"> ★</span></dt>
+        <dd class="mt-2 text-sm text-steel">Google-Bewertung · 33 Rezensionen</dd>
+      </div>
+      <div class="py-8 lg:py-10 lg:px-8 last:lg:pr-0">
+        <dt class="font-display font-800 text-4xl lg:text-5xl text-white">100<span class="text-steel">%</span></dt>
+        <dd class="mt-2 text-sm text-steel">Übergabegarantie bei Reinigungen</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= INTRO ================= -->
+<section class="bg-paper py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+    <div class="lg:col-span-7 reveal">
+      <p class="eyebrow text-[11px] font-semibold uppercase text-brand mb-5">Willkommen bei ARCE</p>
+      <h2 class="font-display font-800 text-navy text-3xl sm:text-4xl lg:text-[2.9rem] leading-[1.05]">
+        Ihre Firma für Umzüge, Reinigungen<br class="hidden sm:block" /> und Entsorgung
+      </h2>
+      <div class="mt-7 space-y-5 text-[17px] leading-relaxed text-slate-600 max-w-2xl">
+        <p>Die ARCE GmbH bietet einen umfassenden Service: Wir erledigen private und geschäftliche Umzüge,
+           wir reinigen Innen- und Aussenräume, wir entsorgen sämtliche Arten von Abfällen.</p>
+        <p>Dabei unterstützen wir Sie zuverlässig von der ersten Anfrage bis zum erfolgreichen Abschluss des
+           Auftrages. Wir kümmern uns um jedes Detail, denn unser oberstes Ziel ist die langfristige
+           Zufriedenheit unserer Kundinnen und Kunden.</p>
+        <p class="text-navy font-medium">Überzeugen Sie sich von unserer Qualität und unserem Fachwissen — und nehmen Sie mit uns Kontakt auf.</p>
+      </div>
+    </div>
+    <div class="lg:col-span-5 reveal">
+      <div class="rounded-2xl bg-white border border-slate-200/80 p-8 sm:p-9 shadow-sm">
+        <h3 class="font-display font-700 text-navy text-xl">…kein Problem, wir kümmern uns darum!</h3>
+        <ul class="mt-6 space-y-4">
+          <li class="flex items-start gap-3"><span class="mt-1 text-brand">✦</span><span class="text-slate-700">Sie haben einen Umzug vor sich?</span></li>
+          <li class="flex items-start gap-3"><span class="mt-1 text-brand">✦</span><span class="text-slate-700">Sie brauchen eine professionelle Reinigung?</span></li>
+          <li class="flex items-start gap-3"><span class="mt-1 text-brand">✦</span><span class="text-slate-700">Sie müssen diverse Sachen entsorgen?</span></li>
+          <li class="flex items-start gap-3"><span class="mt-1 text-brand">✦</span><span class="text-slate-700">Oder alles miteinander …</span></li>
+        </ul>
+        <a href="#kontakt" class="mt-7 inline-flex items-center gap-2 text-brand font-semibold hover:gap-3 transition-all">
+          Jetzt anfragen
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UMZUG ================= -->
+<section id="umzug" class="bg-white py-20 sm:py-28 scroll-mt-20">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="reveal order-2 lg:order-1">
+      <p class="eyebrow text-[11px] font-semibold uppercase text-brand mb-4">01 — Umzug</p>
+      <h2 class="font-display font-800 text-navy text-3xl sm:text-4xl leading-[1.06]">
+        Haben Sie einen Umzug vor sich?
+      </h2>
+      <p class="mt-6 text-[17px] leading-relaxed text-slate-600">
+        Ein Umzug ist meistens eine grosse Herausforderung! Ob grosse oder kleine Umzüge — wir sind Ihr
+        kompetenter und spezialisierter Partner rund ums Zügeln. Ihr Hab und Gut ist bei uns in
+        zuverlässigen und professionellen Händen. Ihre individuellen Bedürfnisse stehen bei uns an erster
+        Stelle, und wir sorgen für einen reibungslosen Umzug.
+      </p>
+      <ul class="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3.5">
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Wohnungsumzug</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Umzüge aller Art — privat &amp; geschäftlich</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Demontage und Montage</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Möbellift</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Klaviertransport</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Pack- und Füllmaterial — Verkauf, Vermietung, Lieferung</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Ein- und Zwischenlagerung des Umzugsgutes</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Speditiver Möbeltransport an den Zielort</li>
+      </ul>
+      <a href="#kontakt" class="mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white hover:bg-signal transition-colors">
+        Unverbindliche Offerte verlangen
+      </a>
+    </div>
+    <div class="reveal order-1 lg:order-2">
+      <div class="relative">
+        <div class="absolute -inset-3 rounded-3xl bg-steel/20 -z-0"></div>
+        <img src="assets/web/umzug.jpg" alt="ARCE Möbeltransport-Lastwagen im Einsatz" class="relative rounded-2xl w-full h-[420px] lg:h-[560px] object-cover shadow-xl shadow-navy/10" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REINIGUNG ================= -->
+<section id="reinigung" class="bg-paper py-20 sm:py-28 scroll-mt-20">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="reveal">
+      <div class="relative">
+        <div class="absolute -inset-3 rounded-3xl bg-steel/25 -z-0"></div>
+        <img src="assets/web/reinigung.jpg" alt="Professionell gereinigte Büroräume durch die ARCE GmbH" class="relative rounded-2xl w-full h-[420px] lg:h-[560px] object-cover shadow-xl shadow-navy/10" />
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow text-[11px] font-semibold uppercase text-brand mb-4">02 — Reinigung</p>
+      <h2 class="font-display font-800 text-navy text-3xl sm:text-4xl leading-[1.06]">
+        Wünschen Sie eine professionelle Reinigung?
+      </h2>
+      <p class="mt-6 text-[17px] leading-relaxed text-slate-600">
+        ARCE GmbH hat genau das, was Sie suchen. Mit langjähriger Erfahrung setzen wir unser Können für
+        unsere Kunden professionell ein. Wir reinigen Ihre Wohnung, Ihr Haus und andere Objekte — mit einer
+        100 % Übergabegarantie. Eine professionelle Reinigung ist nicht nur wichtig für die Hygiene, sondern
+        auch für die Werterhaltung Ihres Besitzes.
+      </p>
+      <ul class="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3.5">
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Reinigung von Neubauten</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Wohnungs- und Liegenschaftsreinigung</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Reinigung mit 100 % Übergabegarantie</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Fensterreinigung inkl. Storen oder Läden</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Teppichreinigung aller Art</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Individuell angepasste Haushaltsreinigung</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Hauswartung — Innen- und Aussenraum</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Solarreinigung</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Geschäftliche Unterhaltsreinigung</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Gewerbe- und Geschäftsreinigungen aller Art</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENTSORGUNG ================= -->
+<section id="entsorgung" class="bg-white py-20 sm:py-28 scroll-mt-20">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="reveal order-2 lg:order-1">
+      <p class="eyebrow text-[11px] font-semibold uppercase text-brand mb-4">03 — Entsorgung</p>
+      <h2 class="font-display font-800 text-navy text-3xl sm:text-4xl leading-[1.06]">
+        Wir übernehmen die Entsorgung für Sie
+      </h2>
+      <p class="mt-6 text-[17px] leading-relaxed text-slate-600">
+        Haben sich bei Ihnen Gegenstände angesammelt, die Sie nicht alleine zur Entsorgungsstelle bringen
+        können? Müssen Sie eine Wohnung entrümpeln, oder ist nach einem Umbau Bauschutt angefallen? Dann sind
+        Sie bei uns genau richtig. Egal, ob es sich um einen einzelnen Schrank oder eine komplette
+        Wohnungseinrichtung handelt — wir sind Ihr Ansprechpartner.
+      </p>
+      <ul class="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3.5">
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Industrie- &amp; Gewerbe-Entsorgungen</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Privat-Entsorgungen</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Muldenservice</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Räumungen nach Todesfall oder Zwangsräumung</li>
+        <li class="flex items-start gap-3 text-slate-700"><span class="mt-[7px] h-1.5 w-1.5 rounded-full bg-brand shrink-0"></span>Räumungen aller Art</li>
+      </ul>
+      <p class="mt-7 text-navy font-medium">Wir entsorgen alles! Gerne bieten wir Ihnen auf Wunsch auch unseren Muldenservice an.</p>
+    </div>
+    <div class="reveal order-1 lg:order-2">
+      <div class="relative">
+        <div class="absolute -inset-3 rounded-3xl bg-steel/20 -z-0"></div>
+        <img src="assets/web/entsorgung.jpg" alt="ARCE Entsorgungs- und Muldenservice-Fahrzeug" class="relative rounded-2xl w-full h-[420px] lg:h-[560px] object-cover shadow-xl shadow-navy/10" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÜBER UNS ================= -->
+<section id="ueber" class="relative bg-navy text-white py-24 sm:py-32 scroll-mt-20 overflow-hidden">
+  <img src="assets/web/fleet2.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-[0.13]" />
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/92 to-navy"></div>
+  <div class="relative mx-auto max-w-5xl px-5 sm:px-8 text-center">
+    <p class="eyebrow text-[11px] font-semibold uppercase text-steel mb-6">Über uns</p>
+    <h2 class="font-display font-800 text-3xl sm:text-5xl leading-[1.05]">
+      Als erfahrene Umzugsfirma aus Frauenfeld<br class="hidden sm:block" /> kümmern wir uns um jedes Detail
+    </h2>
+    <div class="mt-9 space-y-6 text-lg leading-relaxed text-white/80 max-w-3xl mx-auto">
+      <p>Wir helfen Ihnen beim «Zügeln» — absolut professionell und zuverlässig. Wir kümmern uns um alles und
+         jedes Detail, mag es noch so unwichtig erscheinen. Unsere Tätigkeitsbereiche sind breit gefächert:
+         Wir sind in der gesamten Reinigungs-, Umzugs- und Entsorgungsbranche tätig — von kleinen bis hin zu
+         grossen Aufträgen.</p>
+      <p>Unser oberstes Ziel ist die langfristige Kunden- und Mitarbeiterzufriedenheit — bei jedem Auftrag.
+         Lassen Sie sich von Qualität, Professionalität und Fachwissen überzeugen. Wir freuen uns auf Sie!</p>
+    </div>
+    <div class="mt-10 h-px w-40 mx-auto hairline"></div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="team" class="bg-paper py-20 sm:py-28 scroll-mt-20">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="eyebrow text-[11px] font-semibold uppercase text-brand mb-4">Unser Team</p>
+      <h2 class="font-display font-800 text-navy text-3xl sm:text-4xl lg:text-[2.9rem] leading-[1.05]">
+        Menschen, die Ihren Auftrag<br class="hidden sm:block" /> zu ihrer Sache machen
+      </h2>
+      <p class="mt-5 text-[17px] text-slate-600">Ein eingespieltes Team für Umzug, Reinigung und Entsorgung — an den Standorten Frauenfeld und Winterthur.</p>
+    </div>
+    <div id="teamgrid" class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5"></div>
+  </div>
+</section>
+
+<!-- ================= GALERIE ================= -->
+<section id="galerie" class="bg-white py-20 sm:py-28 scroll-mt-20">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12 reveal">
+      <div class="max-w-2xl">
+        <p class="eyebrow text-[11px] font-semibold uppercase text-brand mb-4">Galerie</p>
+        <h2 class="font-display font-800 text-navy text-3xl sm:text-4xl lg:text-[2.9rem] leading-[1.05]">
+          Einblicke in unsere Arbeit
+        </h2>
+      </div>
+      <p class="text-slate-500 max-w-sm">Von Umzügen über Unterhalts- und Solarreinigung bis zur Fassaden- und Glasreinigung — gepflegte Objekte, an denen wir täglich arbeiten.</p>
+    </div>
+    <div class="[column-count:2] lg:[column-count:3] [column-gap:1rem] sm:[column-gap:1.25rem]">
+      <figure class="reveal group relative overflow-hidden rounded-xl mb-4 sm:mb-5 break-inside-avoid"><img src="assets/web/gal1.jpg" alt="ARCE Fuhrpark vor dem Betriebsgebäude" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" /></figure>
+      <figure class="reveal group relative overflow-hidden rounded-xl mb-4 sm:mb-5 break-inside-avoid"><img src="assets/web/gal3.jpg" alt="Fenster- und Glasreinigung an einer Fassade" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" /></figure>
+      <figure class="reveal group relative overflow-hidden rounded-xl mb-4 sm:mb-5 break-inside-avoid"><img src="assets/web/gal5.jpg" alt="Gepflegte Liegenschaft" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" /></figure>
+      <figure class="reveal group relative overflow-hidden rounded-xl mb-4 sm:mb-5 break-inside-avoid"><img src="assets/web/gal2.jpg" alt="Solarreinigung — gereinigte Photovoltaik-Anlage" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" /></figure>
+      <figure class="reveal group relative overflow-hidden rounded-xl mb-4 sm:mb-5 break-inside-avoid"><img src="assets/web/gal6.jpg" alt="Professionell gereinigte Büroräume" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" /></figure>
+      <figure class="reveal group relative overflow-hidden rounded-xl mb-4 sm:mb-5 break-inside-avoid"><img src="assets/web/gal4.jpg" alt="Gereinigte Glasfassade" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" /></figure>
+      <figure class="reveal group relative overflow-hidden rounded-xl mb-4 sm:mb-5 break-inside-avoid"><img src="assets/web/gal8.jpg" alt="Neubaureinigung" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" /></figure>
+      <figure class="reveal group relative overflow-hidden rounded-xl mb-4 sm:mb-5 break-inside-avoid"><img src="assets/web/gal7.jpg" alt="Gewerbereinigung — gereinigtes Tram" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" /></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section id="kontakt" class="bg-paper py-20 sm:py-28 scroll-mt-20">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="eyebrow text-[11px] font-semibold uppercase text-brand mb-4">Kontakt</p>
+      <h2 class="font-display font-800 text-navy text-3xl sm:text-4xl lg:text-[2.9rem] leading-[1.05]">
+        Wir freuen uns auf Ihre<br class="hidden sm:block" /> Kontaktaufnahme
+      </h2>
+      <p class="mt-5 text-[17px] text-slate-600">
+        Für Informationen, Anregungen und unverbindliche Offerten nehmen Sie einfach telefonisch Kontakt mit
+        uns auf oder senden Sie uns eine Nachricht.
+      </p>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <!-- Standorte -->
+      <div class="lg:col-span-5 space-y-5 reveal">
+        <div class="rounded-2xl bg-white border border-slate-200/80 p-7 shadow-sm">
+          <div class="flex items-center gap-2 text-brand font-semibold text-sm uppercase tracking-wider">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Hauptsitz Frauenfeld
+          </div>
+          <div class="mt-4 space-y-1 text-slate-700">
+            <p class="font-medium text-navy">Rheinstrasse 23</p>
+            <p>8500 Frauenfeld</p>
+            <p class="pt-2"><a href="tel:0525525152" class="hover:text-signal transition font-medium">Tel. 052 552 51 52</a></p>
+            <p><a href="mailto:info@arce-gmbh.ch" class="hover:text-signal transition">info@arce-gmbh.ch</a></p>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white border border-slate-200/80 p-7 shadow-sm">
+          <div class="flex items-center gap-2 text-brand font-semibold text-sm uppercase tracking-wider">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Filiale Winterthur
+          </div>
+          <div class="mt-4 space-y-1 text-slate-700">
+            <p class="font-medium text-navy">Hermannstrasse 8</p>
+            <p>8400 Winterthur</p>
+            <p class="pt-2"><a href="tel:0522035152" class="hover:text-signal transition font-medium">Tel. 052 203 51 52</a></p>
+            <p><a href="mailto:winterthur@arce-gmbh.ch" class="hover:text-signal transition">winterthur@arce-gmbh.ch</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formular -->
+      <div class="lg:col-span-7 reveal">
+        <form class="rounded-2xl bg-white border border-slate-200/80 p-7 sm:p-9 shadow-sm" onsubmit="event.preventDefault();this.reset();document.getElementById('formhint').classList.remove('hidden');">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-navy mb-1.5">Name <span class="text-brand">*</span></label>
+              <input required type="text" class="w-full rounded-lg border border-slate-300 bg-paper/40 px-4 py-3 text-slate-800 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-navy mb-1.5">Adresse</label>
+              <input type="text" class="w-full rounded-lg border border-slate-300 bg-paper/40 px-4 py-3 text-slate-800 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-navy mb-1.5">PLZ und Ort</label>
+              <input type="text" class="w-full rounded-lg border border-slate-300 bg-paper/40 px-4 py-3 text-slate-800 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-navy mb-1.5">Telefonnummer</label>
+              <input type="tel" class="w-full rounded-lg border border-slate-300 bg-paper/40 px-4 py-3 text-slate-800 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-navy mb-1.5">E-Mail <span class="text-brand">*</span></label>
+              <input required type="email" class="w-full rounded-lg border border-slate-300 bg-paper/40 px-4 py-3 text-slate-800 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-navy mb-1.5">Nachricht <span class="text-brand">*</span></label>
+              <textarea required rows="4" class="w-full rounded-lg border border-slate-300 bg-paper/40 px-4 py-3 text-slate-800 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition resize-none"></textarea>
+            </div>
+          </div>
+          <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+            <p class="text-xs text-slate-500 max-w-xs">Es gilt unsere Datenschutzerklärung. Bitte die mit <span class="text-brand">*</span> gekennzeichneten Felder ausfüllen.</p>
+            <button type="submit" class="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[15px] font-semibold text-white hover:bg-signal transition-colors shadow-sm">
+              Nachricht senden
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p id="formhint" class="hidden mt-4 text-sm text-brand font-medium">Vielen Dank! Dies ist eine Demo-Vorschau — im finalen Auftritt wird Ihre Nachricht direkt an ARCE übermittelt.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-navy text-white pt-16 pb-10">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="grid lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+      <div class="lg:col-span-5">
+        <img src="assets/web/logo_white.png" alt="ARCE GmbH" class="h-11 w-auto" />
+        <p class="mt-5 text-white/70 max-w-sm leading-relaxed">
+          Ihr Partner für Umzüge, Reinigung und Entsorgung — zuverlässig, persönlich und aus einer Hand.
+          Frauenfeld &amp; Winterthur.
+        </p>
+        <a href="https://www.facebook.com/arce.gmbh/" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-steel hover:text-white transition">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+          arce.gmbh auf Facebook
+        </a>
+      </div>
+      <div class="lg:col-span-3">
+        <h4 class="font-display font-700 text-sm uppercase tracking-wider text-steel">Leistungen</h4>
+        <ul class="mt-5 space-y-3 text-white/75">
+          <li><a href="#umzug" class="hover:text-white transition">Umzug</a></li>
+          <li><a href="#reinigung" class="hover:text-white transition">Reinigung</a></li>
+          <li><a href="#entsorgung" class="hover:text-white transition">Entsorgung &amp; Muldenservice</a></li>
+          <li><a href="#team" class="hover:text-white transition">Team</a></li>
+          <li><a href="#galerie" class="hover:text-white transition">Galerie</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4">
+        <h4 class="font-display font-700 text-sm uppercase tracking-wider text-steel">Standorte</h4>
+        <div class="mt-5 grid sm:grid-cols-2 gap-6 text-white/75 text-sm leading-relaxed">
+          <div>
+            <p class="text-white font-medium">Frauenfeld</p>
+            <p>Rheinstrasse 23<br />8500 Frauenfeld</p>
+            <p class="mt-1"><a href="tel:0525525152" class="hover:text-white transition">052 552 51 52</a></p>
+          </div>
+          <div>
+            <p class="text-white font-medium">Winterthur</p>
+            <p>Hermannstrasse 8<br />8400 Winterthur</p>
+            <p class="mt-1"><a href="tel:0522035152" class="hover:text-white transition">052 203 51 52</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/55">
+      <p>© <span id="yr"></span> ARCE GmbH · CHE-261.966.335</p>
+      <div class="flex items-center gap-5">
+        <a href="#" class="hover:text-white transition">Impressum</a>
+        <a href="#" class="hover:text-white transition">Datenschutz</a>
+        <a href="#" class="hover:text-white transition">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// year
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// mobile menu
+const mnav=document.getElementById('mnav'), burger=document.getElementById('burger'), mclose=document.getElementById('mclose');
+function openM(){mnav.classList.add('open');mnav.classList.remove('closed');document.body.style.overflow='hidden';}
+function closeM(){mnav.classList.remove('open');mnav.classList.add('closed');document.body.style.overflow='';}
+burger.addEventListener('click',openM); mclose.addEventListener('click',closeM);
+document.querySelectorAll('.mlink').forEach(a=>a.addEventListener('click',closeM));
+
+// team grid
+const team=[
+  ['Besiana Ceku','Geschäftsinhaberin'],
+  ['Arbesmir Ceku','Geschäftsführer'],
+  ['Fatima Da Silva Barbosa','Teamleiterin Spezialreinigung'],
+  ['Chantal Varela Paulino Martins','Teamleiterin Unterhaltsreinigung'],
+  ['Ernst Müller','Teamleiter Umzug / Entsorgung'],
+  ['Cornelia Heierli','Büroassistentin'],
+  ['Sabrina Alfieri','Büroassistentin'],
+  ['Sevdije Iseni','Reinigungsfachfrau'],
+  ['Gabriella Molnar Orgovanyine','Unterhaltsreinigungsfachfrau'],
+  ['Lurda Zefi','Reinigungsfachfrau'],
+  ['Anabela Marinho Carvalho','Unterhaltsreinigungsfachfrau'],
+  ['Fatime Ajdini','Unterhaltsreinigungsfachfrau'],
+  ['Sandra Bartolomeu','Reinigungsfachfrau'],
+  ['Laura Seier','Unterhaltsreinigungsfachfrau'],
+  ['Isabel Ferreira dos Santos','Reinigungsfachfrau'],
+  ['Paula Cristina Vasconcelos','Unterhaltsreinigungsfachfrau'],
+  ['Yvonne Löwe','Unterhaltsreinigungsfachfrau'],
+];
+function initials(n){return n.split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();}
+const lead=['Geschäftsinhaberin','Geschäftsführer'];
+document.getElementById('teamgrid').innerHTML=team.map(([n,r])=>{
+  const isLead=lead.includes(r);
+  return `<div class="reveal rounded-xl bg-white border border-slate-200/80 p-5 sm:p-6 hover:shadow-md hover:border-steel/60 transition-all">
+    <div class="h-12 w-12 rounded-full ${isLead?'bg-brand text-white':'bg-paper text-brand border border-steel/40'} flex items-center justify-center font-display font-700 text-sm">${initials(n)}</div>
+    <p class="mt-4 font-display font-700 text-navy leading-tight">${n}</p>
+    <p class="mt-1 text-sm text-slate-500">${r}</p>
+  </div>`;
+}).join('');
+
+// reveal on scroll
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
